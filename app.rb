@@ -4,12 +4,12 @@ get '/' do
   erb :home
 end
 
-post '/food' do
-  "You have entered #{params[:ingredient]}"
-end
-
 get '/food' do
   erb :food
+end
+
+post '/food' do
+  "You have entered #{params[:ingredient]}"
 end
 
 =begin
