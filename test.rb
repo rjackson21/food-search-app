@@ -10,16 +10,11 @@ class Recipe
     end
         
 end
-    
-chickpea_curry = Recipe.new
-    
-chickpea_curry.add_ingredient("chickpea")
-chickpea_curry.add_ingredient("curry")
-chickpea_curry.add_ingredient("potato")
-chickpea_curry.add_ingredient("coconut milk")
 
 puts "What ingredients do you want to make a meal out of?"
-ingredients = gets.chomp
 
+recipe = Recipe.new
+user_input = gets.chomp
+recipe.add_ingredient(user_input)
 
-
+erb :food, locals: {recipe: recipe}
