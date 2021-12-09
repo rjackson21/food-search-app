@@ -1,4 +1,6 @@
 require 'sinatra'
+require 'json'
+require 'net/http'
 
 get '/' do
   erb :home
@@ -10,6 +12,11 @@ end
 
 post '/food' do
   "You have entered #{params[:ingredient]}"
+
+  uri = URI.parse(URI.encode('https://is-vegan.netlify.app/.netlify/functions/api?ingredients=chickpea'))
+  api_response = Net::HTTP.get(uri)
+  JSON.parse(api_response).to_s
+  
 end
 
 =begin
