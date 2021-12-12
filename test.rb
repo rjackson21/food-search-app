@@ -8,6 +8,9 @@ class Recipe
     def add_ingredient(ingredient)
       ingredients << ingredient 
     end
+
+    def search(ingredient)
+        
         
 end
 
@@ -17,4 +20,3 @@ recipe = Recipe.new
 user_input = gets.chomp
 recipe.add_ingredient(user_input)
 
-erb :food, locals: {recipe: recipe}

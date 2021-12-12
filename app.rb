@@ -11,10 +11,10 @@ get '/food' do
 end
 
 post '/food' do
-  uri = URI.parse(URI.encode('https://is-vegan.netlify.app/.netlify/functions/api?ingredients=chickpea'))
+  uri = URI.parse(URI.encode("https://is-vegan.netlify.app/.netlify/functions/api?ingredients=#{params[:ingredient]}"))
   api_response = Net::HTTP.get(uri)
-  JSON.parse(api_response).to_s
-  
+  parsed_response = JSON.parse(api_response)
+  erb :food, locals:{ valid: parsed_response["isVeganSafe"].to_s }
 end
 
 =begin
