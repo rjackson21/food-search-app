@@ -1,2 +1,17 @@
 <p> Home Page</p>
 
+<p> Enter an ingredient to find out if it is vegan: </p>
+<form method="POST" action="/">
+    <input type="text" name="ingredient"/>
+    <input type="submit" />
+</form>
+
+
+
+<% if defined?(valid) %>
+<% if valid == "true" || valid == "false" %>
+        <p> You entered <%= params[:ingredient] %> </p>
+        <p> Vegan: <%= valid %> </p>
+    <% end %>
+<% end %>
+
