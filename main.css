@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(107, 199, 107) !important;
+    background-color: black;
 }
 
 nav {
@@ -8,4 +8,5 @@ nav {
 
 p {
     text-align: center;
+
 }
