@@ -3,9 +3,23 @@ body {
 }
 
 nav {
-    display: inline-block; 
+    display: inline-block;
+    background-color: rgb(107, 199, 107) !important; 
 }
 
 p {
     text-align: center;
+}
+
+.form
+{
+    display: block;
+    text-align: center;
+}
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
