@@ -8,8 +8,12 @@
 
 
 <% if defined?(valid) %>
-<% if valid == "true" || valid == "false" %>
-        <p> You entered: <%= params[:ingredient].capitalize %> </p>
-        <p> Vegan: <%= valid.capitalize%> </p>
+    <% if valid == "true" || valid == "false" %>
+        <p> You Entered: <%= params[:ingredient].capitalize %> </p>
+        <% if valid == "true" %>
+            <p> Vegan: Yes!</p>
+        <% else %>
+            <p> Vegan: Nope! </p>
+        <%end %>
     <% end %>
 <% end %>
